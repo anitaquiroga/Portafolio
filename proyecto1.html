@@ -1,11 +1,774 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AI-Powered Invoice Automation | Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0b0d12;
+      color: #f5f5f5;
+      line-height: 1.7;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      padding: 100px 0;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 7px 14px;
+      border: 1px solid #333842;
+      border-radius: 30px;
+      color: #aab0bd;
+      font-size: 13px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 78px);
+      line-height: 1.05;
+      max-width: 900px;
+      margin-bottom: 30px;
+      letter-spacing: -2px;
+    }
+
+    .hero h1 span {
+      color: #8b5cf6;
+    }
+
+    .hero p {
+      max-width: 750px;
+      font-size: 20px;
+      color: #aab0bd;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 100px 0;
+      border-top: 1px solid #20232b;
+    }
+
+    .section-label {
+      color: #8b5cf6;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: 40px;
+      margin-bottom: 25px;
+      letter-spacing: -1px;
+    }
+
+    h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .description {
+      color: #aab0bd;
+      max-width: 800px;
+      font-size: 17px;
+    }
+
+    /* OVERVIEW */
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 45px;
+    }
+
+    .card {
+      background: #11141b;
+      border: 1px solid #242832;
+      border-radius: 18px;
+      padding: 28px;
+    }
+
+    .card .icon {
+      font-size: 25px;
+      margin-bottom: 18px;
+    }
+
+    .card p {
+      color: #9299a8;
+      font-size: 14px;
+    }
+
+    /* PROBLEM / SOLUTION */
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      margin-top: 40px;
+    }
+
+    .problem-box,
+    .solution-box {
+      padding: 35px;
+      border-radius: 20px;
+      background: #11141b;
+      border: 1px solid #242832;
+    }
+
+    .problem-box {
+      border-left: 3px solid #ef4444;
+    }
+
+    .solution-box {
+      border-left: 3px solid #8b5cf6;
+    }
+
+    .problem-box p,
+    .solution-box p {
+      color: #aab0bd;
+    }
+
+    /* WORKFLOW */
+
+    .workflow {
+      margin-top: 55px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .workflow-step {
+      background: #151821;
+      border: 1px solid #2a2e38;
+      border-radius: 14px;
+      padding: 18px 22px;
+      text-align: center;
+      min-width: 140px;
+    }
+
+    .workflow-step strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .workflow-step small {
+      color: #8f96a5;
+    }
+
+    .arrow {
+      color: #8b5cf6;
+      font-size: 22px;
+    }
+
+    /* DEVELOPMENT PROCESS */
+
+    .timeline {
+      margin-top: 50px;
+      position: relative;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 60px 1fr;
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+
+    .timeline-number {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: #8b5cf6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .timeline-content p {
+      color: #9299a8;
+      max-width: 750px;
+    }
+
+    /* METRICS */
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 45px;
+    }
+
+    .metric {
+      background: #11141b;
+      border: 1px solid #242832;
+      padding: 30px;
+      border-radius: 18px;
+      text-align: center;
+    }
+
+    .metric-number {
+      font-size: 38px;
+      font-weight: 700;
+      color: #8b5cf6;
+      margin-bottom: 5px;
+    }
+
+    .metric-label {
+      color: #9ca3af;
+      font-size: 14px;
+    }
+
+    /* TECHNOLOGIES */
+
+    .tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 35px;
+    }
+
+    .tech {
+      padding: 12px 18px;
+      background: #151821;
+      border: 1px solid #2a2e38;
+      border-radius: 30px;
+      color: #d5d8df;
+      font-size: 14px;
+    }
+
+    /* CONTRIBUTION */
+
+    .contribution-list {
+      margin-top: 35px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .contribution-item {
+      padding: 20px;
+      background: #11141b;
+      border: 1px solid #242832;
+      border-radius: 14px;
+    }
+
+    .contribution-item::before {
+      content: "✓";
+      color: #8b5cf6;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    /* VISUAL PLACEHOLDER */
+
+    .visual-placeholder {
+      margin-top: 50px;
+      min-height: 300px;
+      border: 1px dashed #383d48;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #737b8a;
+      padding: 30px;
+    }
+
+    /* FOOTER */
+
+    .project-footer {
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .project-footer p {
+      color: #9299a8;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    @media (max-width: 800px) {
+
+      .overview-grid,
+      .metrics {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .two-column,
+      .contribution-list {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 100px 0 80px;
+      }
+
+      .workflow {
+        flex-direction: column;
+      }
+
+      .arrow {
+        transform: rotate(90deg);
+      }
+    }
+
+    @media (max-width: 500px) {
+
+      .overview-grid,
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <h1>Hola </h1>
+
+  <!-- HERO -->
+
+  <header class="hero">
+    <div class="container">
+
+      <div class="tag">
+        AI · Automation · Data Integration
+      </div>
+
+      <h1>
+        AI-Powered<br>
+        <span>Invoice Automation</span>
+      </h1>
+
+      <p>
+        An intelligent automation solution developed for Grupo Dinosaurio
+        to transform a manual invoice-processing workflow into an automated,
+        AI-powered data extraction pipeline.
+      </p>
+
+    </div>
+  </header>
+
+
+  <!-- PROJECT OVERVIEW -->
+
+  <section>
+    <div class="container">
+
+      <div class="section-label">01 — Overview</div>
+
+      <h2>The project</h2>
+
+      <p class="description">
+        The objective was to automate the extraction and preparation of
+        invoice data, reducing manual data entry and creating a more
+        reliable and scalable process for the company.
+      </p>
+
+      <div class="overview-grid">
+
+        <div class="card">
+          <div class="icon">⚡</div>
+          <h3>Automation</h3>
+          <p>
+            Automated the workflow from invoice reception to
+            database-ready records.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🧠</div>
+          <h3>Artificial Intelligence</h3>
+          <p>
+            Used Google Gemini to extract structured information
+            from invoice documents.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🔗</div>
+          <h3>Data Integration</h3>
+          <p>
+            Transformed extracted information into structured
+            records ready for SQL integration.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- PROBLEM -->
+
+  <section>
+    <div class="container">
+
+      <div class="section-label">02 — Challenge</div>
+
+      <h2>The problem</h2>
+
+      <div class="two-column">
+
+        <div class="problem-box">
+          <h3>Manual data entry</h3>
+
+          <p>
+            Every incoming invoice had to be manually reviewed and
+            entered into the company's internal system. Receptionists
+            were responsible for manually loading the information and
+            individual items contained in each invoice.
+          </p>
+
+        </div>
+
+        <div class="solution-box">
+          <h3>What needed to change</h3>
+
+          <p>
+            The process needed to become faster, more consistent and
+            less dependent on repetitive manual work, while maintaining
+            a high level of accuracy in the extracted information.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SOLUTION -->
+
+  <section>
+    <div class="container">
+
+      <div class="section-label">03 — Solution</div>
+
+      <h2>From invoice to database</h2>
+
+      <p class="description">
+        The final solution connected cloud storage, automation,
+        artificial intelligence and database preparation into
+        a single workflow.
+      </p>
+
+      <div class="workflow">
+
+        <div class="workflow-step">
+          <strong>Invoice</strong>
+          <small>Received document</small>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="workflow-step">
+          <strong>Google Drive</strong>
+          <small>New invoice detected</small>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="workflow-step">
+          <strong>Make</strong>
+          <small>Automation workflow</small>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="workflow-step">
+          <strong>Gemini</strong>
+          <small>Data extraction</small>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="workflow-step">
+          <strong>JSON</strong>
+          <small>Structured data</small>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="workflow-step">
+          <strong>Validation</strong>
+          <small>Duplicate check</small>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="workflow-step">
+          <strong>SQL</strong>
+          <small>Database-ready record</small>
+        </div>
+
+      </div>
+
+      <div class="visual-placeholder">
+        <p>
+          Add a screenshot or custom architecture diagram here.<br>
+          Recommended: Make.com workflow overview.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- DEVELOPMENT -->
+
+  <section>
+    <div class="container">
+
+      <div class="section-label">04 — Development Process</div>
+
+      <h2>Built through testing and iteration</h2>
+
+      <p class="description">
+        One of the most important parts of the project was determining
+        which AI model could provide the most reliable invoice extraction.
+        The solution was not implemented in a single step: it was tested,
+        evaluated and continuously improved.
+      </p>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-number">01</div>
+
+          <div class="timeline-content">
+            <h3>AI Model Evaluation</h3>
+            <p>
+              OpenAI, Google Gemini and Claude were evaluated using
+              real invoice examples to compare their extraction
+              capabilities.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="timeline-item">
+          <div class="timeline-number">02</div>
+
+          <div class="timeline-content">
+            <h3>Model Selection</h3>
+            <p>
+              After several weeks of testing, Google Gemini was selected
+              as the model that best matched the requirements of the
+              project.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="timeline-item">
+          <div class="timeline-number">03</div>
+
+          <div class="timeline-content">
+            <h3>Structured Data Extraction</h3>
+            <p>
+              The AI was instructed to extract the required invoice
+              information and return it in a predefined JSON structure.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="timeline-item">
+          <div class="timeline-number">04</div>
+
+          <div class="timeline-content">
+            <h3>Prompt Engineering & Validation</h3>
+            <p>
+              Extracted data was loaded into Monday.com for manual
+              verification. The results were analyzed and the prompt
+              was continuously refined to improve accuracy.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="timeline-item">
+          <div class="timeline-number">05</div>
+
+          <div class="timeline-content">
+            <h3>Process Stabilization</h3>
+            <p>
+              Once the extraction process reached a stable level of
+              approximately 97% effectiveness, the validation workflow
+              was incorporated into the final automation.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="timeline-item">
+          <div class="timeline-number">06</div>
+
+          <div class="timeline-content">
+            <h3>Database Integration</h3>
+            <p>
+              The extracted information was validated, checked for
+              duplicates and transformed into records ready to be
+              inserted into the SQL environment.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TECHNOLOGIES -->
+
+  <section>
+    <div class="container">
+
+      <div class="section-label">05 — Technology</div>
+
+      <h2>Tools & technologies</h2>
+
+      <div class="tech-list">
+
+        <div class="tech">Make.com</div>
+        <div class="tech">Google Gemini</div>
+        <div class="tech">Google Drive</div>
+        <div class="tech">Monday.com</div>
+        <div class="tech">SQL</div>
+        <div class="tech">Prompt Engineering</div>
+        <div class="tech">AI Data Extraction</div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- MY CONTRIBUTION -->
+
+  <section>
+    <div class="container">
+
+      <div class="section-label">06 — My Contribution</div>
+
+      <h2>What I worked on</h2>
+
+      <div class="contribution-list">
+
+        <div class="contribution-item">
+          AI model research and comparison
+        </div>
+
+        <div class="contribution-item">
+          Make.com automation architecture
+        </div>
+
+        <div class="contribution-item">
+          Prompt design and optimization
+        </div>
+
+        <div class="contribution-item">
+          JSON structure definition
+        </div>
+
+        <div class="contribution-item">
+          Extraction testing and validation
+        </div>
+
+        <div class="contribution-item">
+          Duplicate detection logic
+        </div>
+
+        <div class="contribution-item">
+          Data transformation for SQL
+        </div>
+
+        <div class="contribution-item">
+          Continuous improvement of the workflow
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- IMPACT -->
+
+  <section>
+    <div class="container">
+
+      <div class="section-label">07 — Impact</div>
+
+      <h2>Turning repetitive work into automation</h2>
+
+      <p class="description">
+        This project demonstrated how artificial intelligence can be
+        combined with workflow automation to solve a real operational
+        problem. By replacing repetitive manual data entry with an
+        automated extraction and validation pipeline, the process became
+        more scalable, consistent and efficient.
+      </p>
+
+      <div class="visual-placeholder">
+        <p>
+          Optional: Before vs. After visualization
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer class="project-footer">
+
+    <div class="container">
+
+      <h2>AI + Automation + Real Business Impact</h2>
+
+      <p>
+        A completed automation project combining artificial intelligence,
+        workflow orchestration and data integration to improve a real-world
+        business process.
+      </p>
+
+    </div>
+
+  </footer>
+
 </body>
 </html>

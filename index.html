@@ -1,155 +1,1396 @@
-
- <!DOCTYPE html>
- <html lang="en">
- <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume</title>
- </head>
- <body>
-    <h1>ANA PAULA QUIROGA</h1>
-    <h3>Information Systems Engineer</h3>
-    <hr />
-    <h2>EDUCATION</h2>
-    <h3>Information Systems Engineer</h3>
-    <p>2020-2025 | Universidad Tecnológica Nacional - Facultad Regional Córdoba</p>
-    <h3>Advanced English Course</h3>
-    <p>February 2026 - April 2026 | Education First Manchester</p>
-    <hr />
 
-    <h2>PROFESIONAL EXPERIENCE</h2>
-    <h3>Digital Process Developer</h3>
-    <p> Drew Tech| July 2025 - May 2026</p>
-    <ul>
-      <li>Designed and implemented AI-powered automation	solutions that	reduced manual task volume across business processes.
-      </li>
-      <li>Built an intelligent invoice	processing system using	AI	to	extract data automatically and generate structured CSV files, cutting manual data entry time.
-      </li>
-      <li>Developed an AI chatbot integrated	with calendar systems to identify available time slots and automatically schedule 30-minute meetings, streamlining coordination between teams.
-      </li>
-      <li>Integrated	APIs and	business	systems to connect previously	siloed workflows and	improve operational efficiency.
-      </li>
-      <li>Built intelligent agents for	data extraction, processing and analysis from multiple sources.
-      </li>
-      <li>Collaborated with cross-functional	teams	to	identify	automation opportunities, delivering scalable solutions using Make.com and	Power Automate.
-      </li>
-   </ul>
+    <title>Ana Paula Quiroga | Information Systems Engineer</title>
 
-    <h3>IT Intership </h3>
-    <p> Drew | Oct 2023 - July 2025</p>
-    <ul>
-      <li>Developed and	maintained solutions	using	Claris FileMaker to optimize internal and	external	business	processes.
-      </li>
-      <li>Implemented API integrations to	connect systems and improve operational efficiency.
-      </li>
-      <li>Designed automated workflows	using	Power	Automate	and Make.com to streamline	business	operations.
-      </li>
-      <li>Coordinated project	workflows and team collaboration	using	Monday.com.
-      </li>
-      <li>Identified	and resolved technical issues, ensuring continuous	improvement	of	implemented	systems.
-      </li>
-   </ul>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <h3>Web developer</h3>
-    <p> Drew | Nov 2021 - March 2022</p>
-    <ul>
-      <li>Developed and maintained web applications to optimize client processes.
-      </li>
-      <li>Implemented web applications using PHP for the backend and HTML / CSS for the frontend, ensuring a functional and efficient design.
-      </li>
-      <li>Performed process automation tasks and managed MySQL databases, optimizing performance and data storage.
-      </li>
-      <li>Used Monday.com to organize, monitor, and track project phases, enabling efficient collaboration with clients.
-      </li>
-   </ul>
-   <hr />
-    <h2>AI & DIGITAL PRODUCT PROJECTS</h2>
-    <h3 href="./proyecto1.html">AI-Powered Invoice Processing</h3>
-    <ul>
-      <li>
-         Designed an automated workflow to extract information from invoices using AI.
-      </li>
-      <li>
-         Transformed unstructured information into clean, structured data ready for analysis.
-      </li>
-      <li>
-         Focused on reducing manual work and improving the overall user workflow.
-      </li>
-    </ul>
+        html {
+            scroll-behavior: smooth;
+        }
 
-    <h3>AI Calendar Assistant</h3>
-    <ul>
-      <li>
-         Developed an AI-powered assistant capable of interacting with calendar information.
-      </li>
-      <li>
-        Designed the workflow to check availability and facilitate 30-minute meeting scheduling.
-      </li>
-      <li>
-        Integrated multiple systems to create a seamless automated experience. 
-      </li>
-    </ul>
-   <hr />
-   
-   <h2>TECHNICAL SKILLS</h2>
-   <ul>
-      <li>
-         AI & Automation: AI-powered solutions, intelligent agents, Make.com, Power Automate, n8n
-      </li>
-      <li>
-         Digital Products: User-oriented solutions, workflow design, problem solving, iterative improvement
-      </li>
-      <li>
-         Development: PHP, HTML, CSS, MySQL, Python
-      </li>
-      <li>
-         Integrations: APIs, webhooks, system integrations
-      </li>
-      <li>
-         Tools: Claris FileMaker, Monday.com
-      </li>
-      <li>
-         Design: UI/UX interest, visual attention to detail, human-centered digital experiences
-      </li>
-   </ul>
+        body {
+            font-family: Inter, Arial, sans-serif;
+            background: #0b0d12;
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
 
-   <h2>SOFT SKILLS</h2>
-   <ul>
-      <li>Problem solving</li>
-      <li>Adaptability</li>
-      <li>Self-management</li>
-      <li>Communication/li>
-      <li>Responsibility</li>
-      <li>Commitment</li>
-      <li>Team collaboration</li>
-   </ul>
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-   <hr />
-    <h2>CERTIFICATIONS</h2>
-    <ul>
-      <li>
-         Make – Certificación Nivel 5 (2026)
-      </li>
-      <li>
-         Curso Anthropic – IA (2026)
-      </li>
-    </ul>
-    
-    <hr />
-    <h2>LANGUAGES</h2>
-    <ul>
-      <li>
-         Spanish | Native
-      </li>
-      <li>
-         English | Upper-intermediate
-      </li>
-    </ul>
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
 
- </body>
- <footer>
-   <hr />
-   <h3><a href="www.linkedin.com/in/ana-paula-quiroga">Linkedin</a></h3>
- </footer>
- </html>
+        /* =========================
+           NAVBAR
+        ========================= */
 
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(14px);
+            background: rgba(11, 13, 18, 0.85);
+            border-bottom: 1px solid #1e2230;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            width: 90%;
+            margin: auto;
+            height: 72px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #8b5cf6;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #a7adbd;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #8b5cf6;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            padding: 100px 0;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            color: #8b5cf6;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 7vw, 6rem);
+            line-height: 0.95;
+            letter-spacing: -3px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #8b5cf6;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #c5c9d4;
+            margin-bottom: 25px;
+        }
+
+        .hero-description {
+            max-width: 650px;
+            color: #9298a8;
+            font-size: 1.05rem;
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 13px 22px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #8b5cf6;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #7c3aed;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            border: 1px solid #303544;
+            color: #d7d9df;
+        }
+
+        .btn-secondary:hover {
+            border-color: #8b5cf6;
+            color: #8b5cf6;
+        }
+
+        .hero-card {
+            background: linear-gradient(
+                145deg,
+                rgba(139, 92, 246, 0.14),
+                rgba(20, 23, 32, 0.7)
+            );
+            border: 1px solid #292d3b;
+            border-radius: 24px;
+            padding: 35px;
+        }
+
+        .hero-card-title {
+            color: #8b5cf6;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+        }
+
+        .hero-stat {
+            padding: 18px 0;
+            border-bottom: 1px solid #292d3b;
+        }
+
+        .hero-stat:last-child {
+            border-bottom: none;
+        }
+
+        .hero-stat strong {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 4px;
+        }
+
+        .hero-stat span {
+            color: #858b9a;
+            font-size: 0.9rem;
+        }
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            margin-bottom: 55px;
+        }
+
+        .section-number {
+            color: #8b5cf6;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            letter-spacing: -1px;
+            margin-bottom: 12px;
+        }
+
+        .section-description {
+            max-width: 700px;
+            color: #858b9a;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .card {
+            background: #11141c;
+            border: 1px solid #252936;
+            border-radius: 18px;
+            padding: 30px;
+        }
+
+        .card:hover {
+            border-color: #3a3157;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .card p {
+            color: #8e94a3;
+            font-size: 0.95rem;
+        }
+
+        /* =========================
+           EXPERIENCE
+        ========================= */
+
+        .timeline {
+            position: relative;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 40px;
+            padding: 35px 0;
+            border-bottom: 1px solid #242833;
+        }
+
+        .timeline-item:first-child {
+            border-top: 1px solid #242833;
+        }
+
+        .timeline-date {
+            color: #8b5cf6;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 5px;
+        }
+
+        .company {
+            color: #9da3b2;
+            margin-bottom: 18px;
+        }
+
+        .timeline-content ul {
+            padding-left: 20px;
+        }
+
+        .timeline-content li {
+            color: #858b9a;
+            margin-bottom: 8px;
+        }
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .project-card {
+            background: #11141c;
+            border: 1px solid #252936;
+            border-radius: 20px;
+            padding: 30px;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            min-height: 390px;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #8b5cf6;
+        }
+
+        .project-number {
+            color: #8b5cf6;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .project-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: #858b9a;
+            font-size: 0.92rem;
+            margin-bottom: 25px;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: auto;
+            margin-bottom: 25px;
+        }
+
+        .tag {
+            background: #1a1d27;
+            border: 1px solid #2b2f3b;
+            color: #aeb3c0;
+            padding: 6px 10px;
+            border-radius: 7px;
+            font-size: 0.75rem;
+        }
+
+        .project-link {
+            color: #8b5cf6;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .project-link:hover {
+            color: #a78bfa;
+        }
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: #11141c;
+            border: 1px solid #252936;
+            border-radius: 18px;
+            padding: 25px;
+        }
+
+        .skill-card h3 {
+            color: #f3f3f5;
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+
+        .skill-card p {
+            color: #858b9a;
+            font-size: 0.9rem;
+        }
+
+        /* =========================
+           EDUCATION
+        ========================= */
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+
+        .education-card {
+            background: #11141c;
+            border: 1px solid #252936;
+            border-radius: 18px;
+            padding: 28px;
+        }
+
+        .education-card .date {
+            color: #8b5cf6;
+            font-size: 0.8rem;
+            margin-bottom: 12px;
+        }
+
+        .education-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .education-card p {
+            color: #858b9a;
+        }
+
+        /* =========================
+           CERTIFICATIONS
+        ========================= */
+
+        .certifications {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .certification {
+            border: 1px solid #292d38;
+            background: #11141c;
+            padding: 13px 17px;
+            border-radius: 10px;
+            color: #b7bbc5;
+            font-size: 0.88rem;
+        }
+
+        /* =========================
+           LANGUAGES
+        ========================= */
+
+        .languages {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .language-card {
+            background: #11141c;
+            border: 1px solid #252936;
+            border-radius: 18px;
+            padding: 25px;
+        }
+
+        .language-card h3 {
+            margin-bottom: 5px;
+        }
+
+        .language-card p {
+            color: #858b9a;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            text-align: center;
+            padding: 120px 0;
+        }
+
+        .contact h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: #858b9a;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            border-top: 1px solid #242833;
+            padding: 30px 0;
+            text-align: center;
+            color: #666d7c;
+            font-size: 0.8rem;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .hero-grid,
+            .about-grid,
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero {
+                padding: 80px 0;
+            }
+
+            .hero-card {
+                max-width: 600px;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .projects-grid,
+            .skills-grid,
+            .languages {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-item {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            section {
+                padding: 75px 0;
+            }
+
+            .contact h2 {
+                font-size: 2.3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav>
+        <div class="nav-container">
+
+            <a href="#" class="logo">
+                AP<span>.</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <header class="hero">
+
+        <div class="container hero-grid">
+
+            <div>
+
+                <div class="eyebrow">
+                    Information Systems Engineer
+                </div>
+
+                <h1>
+                    ANA PAULA<br>
+                    <span>QUIROGA</span>
+                </h1>
+
+                <h2>
+                    AI • Automation • Digital Products
+                </h2>
+
+                <p class="hero-description">
+                    Information Systems Engineer focused on building intelligent
+                    automation solutions, integrating AI into business processes,
+                    and transforming complex workflows into practical digital products.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="btn btn-primary">
+                        Explore my projects
+                    </a>
+
+                    <a href="#contact" class="btn btn-secondary">
+                        Get in touch
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-card">
+
+                <div class="hero-card-title">
+                    Profile
+                </div>
+
+                <div class="hero-stat">
+                    <strong>AI & Automation</strong>
+                    <span>Intelligent workflows and AI-powered solutions</span>
+                </div>
+
+                <div class="hero-stat">
+                    <strong>System Integration</strong>
+                    <span>APIs, webhooks and connected business systems</span>
+                </div>
+
+                <div class="hero-stat">
+                    <strong>Digital Products</strong>
+                    <span>User-oriented solutions and workflow design</span>
+                </div>
+
+                <div class="hero-stat">
+                    <strong>Development</strong>
+                    <span>Web development, databases and Python</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    01 / ABOUT
+                </div>
+
+                <h2 class="section-title">
+                    Turning ideas into digital solutions
+                </h2>
+
+                <p class="section-description">
+                    My work combines software development, automation and artificial
+                    intelligence to solve real business problems and improve the way
+                    people interact with technology.
+                </p>
+
+            </div>
+
+
+            <div class="about-grid">
+
+                <div class="card">
+
+                    <h3>
+                        What I do
+                    </h3>
+
+                    <p>
+                        I design and develop automation workflows, AI-powered
+                        solutions and system integrations that connect different
+                        tools and simplify business processes.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        How I work
+                    </h3>
+
+                    <p>
+                        I focus on understanding the problem first, designing
+                        practical solutions and continuously improving them through
+                        testing, iteration and collaboration.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EXPERIENCE
+    ========================== -->
+
+    <section id="experience">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    02 / EXPERIENCE
+                </div>
+
+                <h2 class="section-title">
+                    Professional experience
+                </h2>
+
+                <p class="section-description">
+                    Experience across software development, process automation,
+                    system integration and artificial intelligence.
+                </p>
+
+            </div>
+
+
+            <div class="timeline">
+
+                <!-- Experience 1 -->
+
+                <div class="timeline-item">
+
+                    <div class="timeline-date">
+                        Jul 2025 — May 2026
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <h3>
+                            Digital Process Developer
+                        </h3>
+
+                        <div class="company">
+                            Drew Tech
+                        </div>
+
+                        <ul>
+
+                            <li>
+                                Designed and implemented AI-powered automation
+                                solutions to reduce manual work across business processes.
+                            </li>
+
+                            <li>
+                                Built an intelligent invoice processing system using
+                                AI to extract information and generate structured data.
+                            </li>
+
+                            <li>
+                                Developed an AI-powered calendar assistant capable of
+                                identifying availability and scheduling meetings.
+                            </li>
+
+                            <li>
+                                Integrated APIs and business systems to connect
+                                previously isolated workflows.
+                            </li>
+
+                            <li>
+                                Built intelligent agents for data extraction,
+                                processing and analysis.
+                            </li>
+
+                            <li>
+                                Collaborated with cross-functional teams to identify
+                                automation opportunities using Make.com and Power Automate.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Experience 2 -->
+
+                <div class="timeline-item">
+
+                    <div class="timeline-date">
+                        Oct 2023 — Jul 2025
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <h3>
+                            IT Intern
+                        </h3>
+
+                        <div class="company">
+                            Drew
+                        </div>
+
+                        <ul>
+
+                            <li>
+                                Developed and maintained solutions using Claris
+                                FileMaker to optimize internal and external processes.
+                            </li>
+
+                            <li>
+                                Implemented API integrations to connect systems and
+                                improve operational efficiency.
+                            </li>
+
+                            <li>
+                                Designed automated workflows using Power Automate
+                                and Make.com.
+                            </li>
+
+                            <li>
+                                Coordinated project workflows and team collaboration
+                                using Monday.com.
+                            </li>
+
+                            <li>
+                                Identified and resolved technical issues while
+                                continuously improving implemented solutions.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Experience 3 -->
+
+                <div class="timeline-item">
+
+                    <div class="timeline-date">
+                        Nov 2021 — Mar 2022
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <h3>
+                            Web Developer
+                        </h3>
+
+                        <div class="company">
+                            Drew
+                        </div>
+
+                        <ul>
+
+                            <li>
+                                Developed and maintained web applications to
+                                optimize client processes.
+                            </li>
+
+                            <li>
+                                Built web applications using PHP, HTML and CSS.
+                            </li>
+
+                            <li>
+                                Performed process automation and managed MySQL databases.
+                            </li>
+
+                            <li>
+                                Used Monday.com to organize and track project phases
+                                and client collaboration.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECTS
+    ========================== -->
+
+    <section id="projects">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    03 / PROJECTS
+                </div>
+
+                <h2 class="section-title">
+                    AI & Digital Product Projects
+                </h2>
+
+                <p class="section-description">
+                    A selection of projects where artificial intelligence,
+                    automation and system integration come together to solve
+                    real-world business challenges.
+                </p>
+
+            </div>
+
+
+            <div class="projects-grid">
+
+
+                <!-- Project 1 -->
+
+                <div class="project-card">
+
+                    <div class="project-number">
+                        PROJECT 01
+                    </div>
+
+                    <h3>
+                        AI-Powered Invoice Processing
+                    </h3>
+
+                    <p>
+                        Automated invoice processing workflow that uses AI to
+                        extract information from unstructured documents and
+                        transform it into structured business data.
+                    </p>
+
+                    <div class="project-tags">
+
+                        <span class="tag">Make.com</span>
+                        <span class="tag">Gemini</span>
+                        <span class="tag">Monday.com</span>
+                        <span class="tag">SQL</span>
+
+                    </div>
+
+                    <a href="./proyecto1.html" class="project-link">
+                        View case study →
+                    </a>
+
+                </div>
+
+
+                <!-- Project 2 -->
+
+                <div class="project-card">
+
+                    <div class="project-number">
+                        PROJECT 02
+                    </div>
+
+                    <h3>
+                        AI Calendar Assistant
+                    </h3>
+
+                    <p>
+                        AI-powered assistant designed to analyze meeting requests,
+                        check calendar availability, propose time slots and
+                        automatically schedule confirmed meetings.
+                    </p>
+
+                    <div class="project-tags">
+
+                        <span class="tag">GPT-4o</span>
+                        <span class="tag">Make.com</span>
+                        <span class="tag">Google Calendar</span>
+                        <span class="tag">AI Agent</span>
+
+                    </div>
+
+                    <a href="./proyecto2.html" class="project-link">
+                        View case study →
+                    </a>
+
+                </div>
+
+
+                <!-- Project 3 -->
+
+                <div class="project-card">
+
+                    <div class="project-number">
+                        PROJECT 03
+                    </div>
+
+                    <h3>
+                        AI Marketing Image Generator
+                    </h3>
+
+                    <p>
+                        Automated creative workflow that enhances marketing prompts,
+                        generates AI images and delivers the final assets directly
+                        to the team's workspace.
+                    </p>
+
+                    <div class="project-tags">
+
+                        <span class="tag">Gemini 2.5</span>
+                        <span class="tag">Nano Banana</span>
+                        <span class="tag">Make.com</span>
+                        <span class="tag">Google Drive</span>
+
+                    </div>
+
+                    <a href="./proyecto3.html" class="project-link">
+                        View case study →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================== -->
+
+    <section id="skills">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    04 / SKILLS
+                </div>
+
+                <h2 class="section-title">
+                    Technical toolkit
+                </h2>
+
+                <p class="section-description">
+                    Technologies and capabilities I use to design, build and
+                    integrate digital solutions.
+                </p>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+
+                    <h3>
+                        AI & Automation
+                    </h3>
+
+                    <p>
+                        AI-powered solutions, intelligent agents, Make.com,
+                        Power Automate, n8n, prompt engineering and workflow automation.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <h3>
+                        Digital Products
+                    </h3>
+
+                    <p>
+                        User-oriented solutions, workflow design, problem solving,
+                        iterative improvement and process optimization.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <h3>
+                        Development
+                    </h3>
+
+                    <p>
+                        PHP, HTML, CSS, MySQL and Python.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <h3>
+                        Integrations
+                    </h3>
+
+                    <p>
+                        REST APIs, webhooks, system integrations and
+                        business process connectivity.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <h3>
+                        Business Tools
+                    </h3>
+
+                    <p>
+                        Claris FileMaker, Monday.com, Google Workspace
+                        and automation platforms.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <h3>
+                        Design & UX
+                    </h3>
+
+                    <p>
+                        UI/UX interest, visual attention to detail and
+                        human-centered digital experiences.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EDUCATION
+    ========================== -->
+
+    <section id="education">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    05 / EDUCATION
+                </div>
+
+                <h2 class="section-title">
+                    Education & certifications
+                </h2>
+
+            </div>
+
+
+            <div class="education-grid">
+
+                <div class="education-card">
+
+                    <div class="date">
+                        2020 — 2025
+                    </div>
+
+                    <h3>
+                        Information Systems Engineer
+                    </h3>
+
+                    <p>
+                        Universidad Tecnológica Nacional —
+                        Facultad Regional Córdoba
+                    </p>
+
+                </div>
+
+
+                <div class="education-card">
+
+                    <div class="date">
+                        Feb 2026 — Apr 2026
+                    </div>
+
+                    <h3>
+                        Advanced English Course
+                    </h3>
+
+                    <p>
+                        Education First — Manchester
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div style="margin-top: 35px;">
+
+                <h3 style="margin-bottom: 18px;">
+                    Certifications
+                </h3>
+
+                <div class="certifications">
+
+                    <div class="certification">
+                        Make — Certification Level 5 · 2026
+                    </div>
+
+                    <div class="certification">
+                        Anthropic Course — AI · 2026
+                    </div>
+
+                    <div class="certification">
+                        Education First — English · 2026
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LANGUAGES
+    ========================== -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <div class="section-number">
+                    06 / LANGUAGES
+                </div>
+
+                <h2 class="section-title">
+                    Languages
+                </h2>
+
+            </div>
+
+
+            <div class="languages">
+
+                <div class="language-card">
+
+                    <h3>
+                        Spanish
+                    </h3>
+
+                    <p>
+                        Native
+                    </p>
+
+                </div>
+
+
+                <div class="language-card">
+
+                    <h3>
+                        English
+                    </h3>
+
+                    <p>
+                        Upper-intermediate
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section id="contact" class="contact">
+
+        <div class="container">
+
+            <div class="section-number">
+                07 / CONTACT
+            </div>
+
+            <h2>
+                Let's build something useful.
+            </h2>
+
+            <p>
+                Interested in AI, automation, digital products or
+                system integration? Feel free to connect with me.
+            </p>
+
+            <div class="contact-links">
+
+                <a
+                    href="https://www.linkedin.com/in/ana-paula-quiroga"
+                    target="_blank"
+                    class="btn btn-primary">
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="container">
+
+            © 2026 Ana Paula Quiroga · Information Systems Engineer
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
